@@ -18,10 +18,14 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-    - run: yarn install
-    - run: yarn build
-    - run: yarn export
-    - run: touch ./out/.nojekyll
+    - name: Install node_modules
+      run: yarn install
+    - name: Build NextJS
+      run: yarn build
+    - name: Export Build
+      run: yarn export
+    - name: Create .nojekyll
+      run: touch ./out/.nojekyll
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@4.1.1
       with:
