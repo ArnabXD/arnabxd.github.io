@@ -4,7 +4,7 @@ import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider>
+    <ThemeProvider attribute="class">
         <Component {...pageProps} />
     </ThemeProvider>
   )
