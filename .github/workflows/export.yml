@@ -1,10 +1,10 @@
-name: Github Pages Deploy
+name: NextJS Export
 
 on:
   push:
-    branches: [main]
+    branches-ignore: [main, gh-pages]
   pull_request:
-    branches: [main]
+    branches-ignore: [main, gh-pages]
 
 jobs:
   build:
@@ -24,10 +24,3 @@ jobs:
         run: yarn build
       - name: Export Build
         run: yarn export
-      - name: Create .nojekyll
-        run: touch ./out/.nojekyll
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.1
-        with:
-          branch: gh-pages
-          folder: out
