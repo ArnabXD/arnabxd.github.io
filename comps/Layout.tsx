@@ -10,7 +10,7 @@ export const Layout: FC<LayoutProps> = ({ title, center, children }) => {
     return (
         <div>
             <Header title={title ? title : ''} />
-            <div className={"items-center px-4 md:px-8 lg:px-32"}>
+            <div className={"items-center px-4 md:px-8 lg:px-48"}>
                 {children}
             </div>
         </div>
