@@ -21,7 +21,7 @@ export const Header: FC<HeaderProps> = ({ title }) => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <nav className="sticky top-0 bg-gray-50 dark:bg-black backdrop-filter backdrop-blur-lg bg-opacity-75 dark:bg-opacity-75 shadow-md flex justify-between px-4 md:px-8 lg:px-48">
-                <div className="w-screen md:flex justify-between py-5 text-xl">
+                <div className="w-screen md:flex justify-between py-5 text-xl items-center">
                     <Link href="/">
                         <span className="text-4xl xd-title cursor-pointer">{"<Arnab/>"}</span>
                     </Link>
@@ -39,7 +39,7 @@ export const Header: FC<HeaderProps> = ({ title }) => {
                         </ul>
                     </div>
                 </div>
-                <div className="flex items-center md:right-8 lg:right-48">
+                <div className="flex my-5 py-1 md:right-8 lg:right-48">
                     <button onClick={switchTheme} className={"transform hover:text-primary focus:outline-none bg-gray-200 dark:bg-gray-800 rounded p-2 h-8 w-8 grid place-items-center mx-2 ring-1 ring-current ring-opacity-50 md:hidden"}>
                         <ToggleIcon />
                     </button>
