@@ -1,3 +1,3 @@
 export { Header } from './Header';
 export { Layout } from './Layout';
-export { MenuIcon, DevSvg } from './icons';
+export { MenuIcon, DevSvg, Loader } from './icons';

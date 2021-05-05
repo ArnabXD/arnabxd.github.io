@@ -64,7 +64,7 @@ export function MenuIcon(props: SVGProps<SVGSVGElement>) {
 
 
 export function DevSvg(props: SVGProps<SVGSVGElement>) {
-    return(
+    return (
         <svg
             id="prefix__b52d7e2d-d80f-4111-b6ed-d15502ee1edd"
             xmlns="http://www.w3.org/2000/svg"
@@ -265,3 +265,14 @@ export function DevSvg(props: SVGProps<SVGSVGElement>) {
         </svg>
     )
 }
+
+export function Loader(props: React.SVGProps<SVGSVGElement>) {
+    return (
+        <svg
+        viewBox="0 0 24 24"
+        {...props}
+      >
+        <path fill="currentColor" d="M12 4V2A10 10 0 002 12h2a8 8 0 018-8z" />
+      </svg>
+    )
+  }
