@@ -17,7 +17,7 @@ export const Header: FC<HeaderProps> = ({ title }) => {
     return (
         <>
             <Head>
-                <title>{"Arnab" + (title && ` // ${title}`)}</title>
+                <title>{"<Arnab/>" + (title && ` // ${title}`)}</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <nav className="sticky top-0 bg-gray-50 dark:bg-black backdrop-filter backdrop-blur-lg bg-opacity-75 dark:bg-opacity-75 shadow-md flex justify-between px-4 md:px-8 lg:px-48">
