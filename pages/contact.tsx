@@ -17,7 +17,7 @@ const CONTACT_API = process.env.NEXT_PUBLIC_CONTACT_API || `https://contact.arna
 
 const Contact: FC = () => {
     const [data, setData] = useState<IContact>(InitialData);
-    const [loading, setLoading] = useState<boolean>(true);
+    const [loading, setLoading] = useState<boolean>(false);
 
     const sendMessage = async () => {
         try {
@@ -30,14 +30,13 @@ const Contact: FC = () => {
                 body: JSON.stringify(data)
             })
             if (resp.status === 200) {
+                setLoading(false);
                 setData(InitialData);
             } else {
                 console.log(await resp.text());
             }
         } catch (err) {
             console.log(err)
-        } finally {
-            setLoading(false);
         }
     }
 
@@ -72,7 +71,7 @@ const Contact: FC = () => {
                         disabled={data.email === '' || data.name === '' || data.message === ''}
                         onClick={sendMessage}
                     >
-                        <Loader className={`animate-spin mx-2 ` + (loading ? `hidden` : `inline-block`)} height={15} />
+                        <Loader className={`animate-spin mx-2 ` + (loading ? `inline-block` : `hidden`)} height={15} />
                         Send Message
                     </button>
                 </div>
